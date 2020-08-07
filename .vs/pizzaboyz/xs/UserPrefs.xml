@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{8CEE1AFD-5F46-4E2A-AC32-C382686A09E1}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AccountController.cs">
+    <Files>
+      <File FileName="Views/Home/Index.cshtml" Line="74" Column="19" />
+      <File FileName="wwwroot/js/main.js" />
+      <File FileName="Models/ApplicationUser.cs" />
+      <File FileName="Models/ErrorViewModel.cs" />
+      <File FileName="Models/Order.cs" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Controllers/AccountController.cs" Line="53" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="pizzaboyz" expanded="True">
+            <Node name="pizzaboyz" expanded="True" selected="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="js" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.pizzaboyz PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

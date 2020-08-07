@@ -1,0 +1,196 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col s12">
+            <div id="textimg">
+                <h5 class="center-align">Welcome to Megapizza Online Store</h5>
+            </div>
+            <img src="~/images/alot.jpg" id="55" class="responsive-img" alt="" style="width: 1700px; height: 400px;" />
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="container">
+
+    <div class="row category" id="pizzas">
+        @model Order
+        <div class="col product xl3">
+            <div class="col product-image s4 xl10 ">
+                <img src="~/images/pizzapic3.png " id="testlol">
+            </div>
+            <div class="col product-name xl10 ">
+                <div class="header1 ">Alfredo Shizel Pizza</div>
+            </div>
+            <div class="col product-description xl10">Spinach Alfredo sauce, bacon, Canadian bacon, mushrooms, and cheese.</div>
+            <div id="size1" class="col product-size xl12">
+                <div class="col size s12">
+                    <label class="radio">
+                        <input name="pizzasize" type="radio" sizee="Small" value="$14.96" />
+                        <span>Small</span>
+                    </label>
+                </div>
+                <div class="col size s12">
+                    <label>
+                        <input name="pizzasize" sizee="Medium" type="radio" value="$20.72" />
+                        <span>Meduim</span>
+                    </label>
+                </div>
+                <div class="col size s12">
+                    <label>
+                        <input name="pizzasize" sizee="Large" type="radio" value="$24.67" />
+                        <span>Large</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col product-cart xl12 ">
+                <div class="col s6"><span class="money" id="money">$14.96</span></div>
+                <div class="col product-to-cart s6 ">
+                    <form id="alfredo" asp-controller="Order" asp-action="AddOrder" method="POST">
+                        <input type="hidden" asp-for="Name" value="Alfredo Shizell Pizza">
+                        <input type="hidden" asp-for="Size" value="Large">
+                        <input type="hidden" asp-for="Quantity" value="1">
+                        <input type="hidden" asp-for="Price" value="14.99">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col product xl3 ">
+            <div class="col product-image s4 xl10 ">
+                <img src="~/images/pizzapic2.png ">
+            </div>
+            <div class="col product-name xl10 ">
+                <div class="header1 ">Pizza, <br> What Pizza</div>
+            </div>
+            <div class="col product-description xl10 ">Hot stuff, <br> jalapeno,Hot Suase, Onion  </div>
+            <div id="size2" class="col product-size xl12">
+                <div class="col size s12">
+                    <label class="radio">
+                        <input name="pizzasize2" type="radio" sizee="Small" value="$16.89" />
+                        <span>Small</span>
+                    </label>
+                </div>
+                <div class="col size s12">
+                    <label>
+                        <input name="pizzasize2" type="radio" value="$21.66" />
+                        <span>Meduim</span>
+                    </label>
+                </div>
+                <div class="col size s12">
+                    <label>
+                        <input name="pizzasize2" type="radio" value="$25.99" />
+                        <span>Large</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col product-cart xl12 ">
+                    <div class="col s6 "><span class="money" id="money2">$16.89</span></div>
+                    <div class="col product-to-cart s6 ">
+                        <form id="pizzapizza" asp-controller="Order" asp-action="AddOrder" method="POST">
+                            <input type="hidden" asp-for="Name" value="Pizza, What Pizza">
+                            <input type="hidden" asp-for="Size" value="Large">
+                            <input type="hidden" asp-for="Quantity" value="1">
+                            <input type="hidden" asp-for="Price" value="14.99">
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </form>
+            </div>
+        </div>
+    </div>
+    <div class="col product xl3 ">
+        <div class="col product-image s4 xl10 ">
+            <img src="~/images/hawaainpizza.png">
+        </div>
+        <div class="col product-name xl10 ">
+            <div class="header1 ">Hawaiian pizza</div>
+        </div>
+        <div class="col product-description xl10 ">Original crust, signature pizza sauce, pineapple, Canadian bacon.</div>
+        <div id="size3" class="col product-size xl12">
+            <div class="col size s12">
+                <label class="radio">
+                    <input name="pizzasize3" type="radio" size="small" value="$12.99" />
+                    <span>Small</span>
+                </label>
+            </div>
+            <div class="col size s12">
+                <label>
+                    <input name="pizzasize3" type="radio" value="$20.55" />
+                    <span>Meduim</span>
+                </label>
+            </div>
+            <div class="col size s12">
+                <label>
+                    <input name="pizzasize3" type="radio" value="$26.78" />
+                    <span>Large</span>
+                </label>
+            </div>
+        </div>
+        <div class="col product-cart xl12 ">
+            <div class="col s6 "><span class="money" id="money3">$12.99</span></div>
+            <div class="col product-to-cart s6 ">
+                <form id="hawai" asp-controller="Order" asp-action="AddOrder" method="POST">
+                    <input type="hidden" asp-for="Name" value="Hawaiian pizza">
+                    <input type="hidden" asp-for="Size" value="Large">
+                    <input type="hidden" asp-for="Quantity" value="1">
+                    <input type="hidden" asp-for="Price" value="14.99">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col product xl3 ">
+        <div class="col product-image s4 xl10 ">
+            <img src="~/images/pizza4.png">
+        </div>
+        <div class="col product-name xl10 ">
+            <div class="header1 ">Vegie Pizza</div>
+        </div>
+        <div class="col product-description xl10 ">Roma tomatoes, onions, mushrooms, ripe black olives and real cheese</div>
+        <div id="size4" class="col product-size xl12">
+            <div class="col size s12">
+                <label class="radio">
+                    <input name="pizzasize4" type="radio" size="small" value="$12.77" />
+                    <span>Small</span>
+                </label>
+            </div>
+            <div class="col size s12">
+                <label>
+                    <input name="pizzasize4" type="radio" value="$18.68" />
+                    <span>Meduim</span>
+                </label>
+            </div>
+            <div class="col size s12">
+                <label>
+                    <input name="pizzasize4" type="radio" value="$24.77" />
+                    <span>Large</span>
+                </label>
+            </div>
+        </div>
+        <div class="col product-cart xl12 ">
+            <div class="col s6 "><span class="money" id="money4">$12.77</span></div>
+            <div class="col product-to-cart s6 ">
+                <form id="veggie" asp-controller="Order" asp-action="AddOrder" method="POST">
+                    <input type="hidden" asp-for="Name" value="Vegie Pizza">
+                    <input type="hidden" asp-for="Size" value="Large">
+                    <input type="hidden" asp-for="Quantity" value="1">
+                    <input type="hidden" asp-for="Price" value="14.99">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+

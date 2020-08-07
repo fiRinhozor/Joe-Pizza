@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+          <div class="container cart">
+              <table id="cart" class="table table-hover table-condensed">
+                  <thead>
+                      <tr>
+                          <th style="width:35%">Product</th>
+                          <th style="width:10%">Size</th>
+                          <th style="width:10%">Price</th>
+                          <th style="width:8%">Quantity</th>
+                          <th style="width:25%" class="text-center">Subtotal</th>
+                          <th></th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    @foreach (var order in Model.Orders )
+                    {
+                      <tr>
+                          <td data-th="Product">
+                              <div class="row">
+                                  <div class="col-sm-2 hidden-xs"><img src="~/images/tablepizza.png" alt="..." class="img-responsive" /></div>
+                                  <div class="col-sm-10">
+                                      <h4 class="nomargin">@order.Name</h4>
+                                  </div>
+                              </div>
+                          </td>
+                          <td data-th="Size">@order.Size</td>
+                          <td class="Price" data-th="Price">@order.Price</td>
+                          <td class="Quantity" data-th="Quantity">@order.Quantity</td>
+                          <td data-th="Subtotal" class="Subtotal text-center">@(order.Quantity * order.Price)</td>
+                          <td class="actions" data-th="">
+                            <form asp-action="UpdateOrder" method="POST">
+                              <button type="submit" class="btn btn-info btn-sm"><i class="fa fa-plus"></i></button>
+                              <input type="hidden" name="id" value="@order.Id">
+                            </form>
+                          </td>
+                            <td>
+                            <form asp-action="DeleteOrder" method="POST">
+                              <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                              <input type="hidden" name="id" value="@order.Id">
+                            </form>
+                          </td>
+                      </tr>
+                    }
+                  </tbody>
+                  <tfoot>
+                      <tr class="visible-xs">
+                          <td class="text-center"><strong>Total</strong></td>
+                      </tr>
+                      <tr>
+                          <td><a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                          <td colspan="2" class="hidden-xs">
+                              <strong class="total-amount"></strong>
+                          </td>
+                          <td class="hidden-xs text-center"></td>
+                          <td><a  asp-area="" asp-controller="Order" asp-action="OrderCompleted" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+                      </tr>
+                  </tfoot>
+              </table>
+          </div>
+
+        <script>
+            var count = 0
+            $('.Subtotal').each(function(){
+                var a = parseFloat($(this).text());
+                count += a;
+            })
+            $('.total-amount').text(`Total Amount: ${count}`)
+        </script>
+    </body>
+</html>

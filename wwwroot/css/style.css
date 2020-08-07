@@ -1,0 +1,347 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            line-height: 1.5;
+            color: #272424;
+            overflow-x: hidden;
+        }
+
+        nav {
+            height: 100% !important;
+        }
+
+        .nav-wrapper {
+            background-color: #9a1212;
+            height: 50%;
+            padding: 25px 50px 75px 25px;
+        }
+
+        .nav-wrapper ul li {
+            padding-right: 30px;
+        }
+
+        .nav-wrapper ul li a {
+            margin-left: 15px;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        .carousel {
+            height: 500px !important;
+        }
+
+        .container {
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        .product-image {
+            min-width: 233px;
+            min-height: 240px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+        }
+
+        .product-name {
+            margin: 10px 0;
+        }
+
+        .header1 {
+            color: #373535;
+            font-size: 20px;
+            line-height: 1.125;
+            font-family: "Dodo Medium", Helvetica, Arial, sans-serif;
+        }
+
+        .product-description {
+            font-size: 15px;
+            line-height: 1.35;
+            color: #878686;
+            font-family: "Lato Regular", Helvetica, Arial, sans-serif;
+            padding-bottom: 30px;
+        }
+
+        .product-controls {
+            position: absolute;
+            width: 100%;
+        }
+
+        .product-size {
+            float: left;
+            padding-top: 15px !important;
+            height: 100px !important;
+        }
+
+        .money {
+            font-size: 25px;
+            white-space: nowrap;
+            font-family: "Dodo Medium", Helvetica, Arial, sans-serif;
+        }
+
+        .category {
+            padding-top: 50px;
+        }
+
+        .product {
+            height: 500px !important;
+            padding: 0;
+        }
+
+        .product-cart {
+            height: 50px;
+            width: 100%;
+            padding-top: 15px !important;
+        }
+
+        .account {
+            padding-top: 150px;
+            text-align: center;
+        }
+
+        .account-header {
+            font-size: 25px;
+        }
+
+        .material-icons {
+            font-size: 40px !important;
+        }
+
+        .form-field {
+            margin-left: 10px !important;
+        }
+
+        hr {
+            height: 10px;
+            border: none;
+            background-color: rgb(170, 19, 19);
+        }
+
+        .product-to-cart i {
+            color: rgb(170, 19, 19);
+        }
+
+        .size input {
+            width: 50px !important;
+            height: 30px !important;
+            font-size: 10px;
+            float: left;
+        }
+
+        .table>tbody>tr>td,
+        .table>tfoot>tr>td {
+            vertical-align: middle;
+        }
+
+        @media screen and (max-width: 600px) {
+            table#cart tbody td .form-control {
+                width: 20%;
+                display: inline !important;
+            }
+            .actions .btn {
+                width: 36%;
+                margin: 1.5em 0;
+            }
+            .actions .btn-info {
+                float: left;
+            }
+            .actions .btn-danger {
+                float: right;
+            }
+            table#cart thead {
+                display: none;
+            }
+            table#cart tbody td {
+                display: block;
+                padding: .6rem;
+                min-width: 320px;
+            }
+            table#cart tbody tr td:first-child {
+                background: #333;
+                color: #fff;
+            }
+            table#cart tbody td:before {
+                content: attr(data-th);
+                font-weight: bold;
+                display: inline-block;
+                width: 8rem;
+            }
+            table#cart tfoot td {
+                display: block;
+            }
+            table#cart tfoot td .btn {
+                display: block;
+            }
+        }
+
+        .cart {
+            padding-top: 50px !important;
+        }
+
+        footer{
+          text-align: center;
+        }
+
+        .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        line-height: 1;
+        width: 100%;
+        }
+
+
+        .logoo{
+          width: 126px;
+          height: 68px;
+        }
+        .contactInf
+        {
+          background-color: #cbd7d9;
+          width: 50%;
+          float: left;
+          margin: 2%;
+          margin-left: 0;
+          padding-left: 2%;
+          padding-bottom: 1%;
+          border: solid black 1px;
+          display: inline;
+        }
+        .contactInf li{
+          list-style-type: none;
+        }
+        @import "compass/css3";
+
+        @import "compass/css3";
+
+        //Variables here:
+        //(alongside with commented suggestions)
+        $foreground-color:#b85b3f;//black;
+        $background-color:#e8e3c7;//white
+        $shadow-color:#ba9186;//$foreground-color;
+        $distance:8px;
+        $cut-distance:3px;//$distance/4;
+        $strips-size:6px; //10px
+        $strips-ratio:50%;//70%
+        $strips-angle:45deg;//90deg;
+
+        //cray stuff yo. be sure to try (if you please)
+        $animate:false;//true
+        $fixed:false;//true
+
+        body{
+          font-family: 'Open Sans Condensed', sans-serif;
+          font-size:85pt;
+          background-color:$background-color;
+          text-align:center;
+          line-height:1.2em;
+          padding-top:70px;
+        }
+        .dashed-shadow{
+          position:relative;
+          top:$distance;
+          left:$distance;
+          display:inline-block;
+          color:$shadow-color;
+        }
+        @keyframes dash-animation{
+          0% {background-position:0 0};
+          100% {background-position:100% 0};
+        }
+        .dashed-shadow:before{
+          content:" ";
+          display:block;
+
+          position:absolute;
+          $bleeding-horizontal:10px;
+          $bleeding-vertical:0px;
+          top:-$bleeding-vertical - $distance;
+          left:-$bleeding-vertical - $distance;
+          bottom:-$bleeding-horizontal + $distance;
+          right:-$bleeding-horizontal + $distance;
+          z-index:1;
+          $color:$background-color;
+          $size:$strips-ratio/2;
+          $halfSize:$size/2;
+          $p1:$halfSize;
+          $p2:50%-$halfSize;
+          $p3:50%+$halfSize;
+          $p4:100%-$halfSize;
+          $transparent:transparentize($color,1);
+          @include background-image(linear-gradient($strips-angle,$color $p1, $transparent $p1, $transparent $p2,$color $p2, $color $p3, $transparent $p3, $transparent $p4, $color $p4));
+          background-size:$strips-size $strips-size;
+          @if($animate){
+            animation:dash-animation 30s infinite linear;
+          }
+          @if($fixed){
+            background-attachment:fixed;
+          }
+        }
+        .dashed-shadow:hover:before{
+          animation:dash-animation 30s infinite linear;
+        }
+
+        .dashed-shadow:after{
+          z-index:2;
+          content:attr(data-text);
+          position:absolute;
+          left:-$distance;
+          top:-$distance;
+          color:$foreground-color;
+          text-shadow:$cut-distance $cut-distance $background-color;
+        }
+
+        //fancy stuff - just useless fluff, don't mind from here onwards
+
+        .hello{
+          font-family:'Cookie',cursive;
+          font-size:140pt;
+        }
+        .sorta-block{
+          font-size:50pt;
+          line-height:1.1em;
+          @include transform(skew(0,-5deg));
+          z-index:3;
+          position:relative;
+          margin-top:20px;
+          margin-bottom:10px;
+        }
+        .sorta{
+          border-top:4px solid $foreground-color;
+          border-bottom:4px solid $foreground-color;
+
+          text-transform:uppercase;
+          z-index:3;
+          //position:relative;
+          //display:block;
+          //width:300px;
+          font-style:italic;
+        }
+        .hipsterish{
+           font-family: 'Sancreek', cursive;
+            font-size:70pt;
+        }
+        .dashed-shadow-text{
+          font-size:140pt;
+          line-height:0.7em;
+          //left:-10px;
+        }
+        .shadow{
+          font-size:120pt;
+          line-height:0.8em;
+        }
+
+        .aboutpg{
+          background-color: #999;
+        }
